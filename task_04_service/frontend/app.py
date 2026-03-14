@@ -2,9 +2,10 @@ import streamlit as st
 import requests
 import pandas as pd
 import plotly.express as px
+import os
 
 # Константы
-API_URL = "http://127.0.0.1:8000"
+API_URL = os.environ.get("API_URL", "http://127.0.0.1:8000")
 
 # Настройка страницы
 st.set_page_config(page_title="Energy Dashboard", layout="wide")
